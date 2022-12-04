@@ -1,0 +1,18 @@
+/* Você vai precisar trocar a cor dos botões e alguns textos!
+  VERDE = "#2FBE34"
+  AMARELO = "#FF922E"
+  VERMELHO = "#FF3030"
+  CINZA = "#333333" 
+*/
+
+.bgVerde {
+    background-color: #2FBE34;
+}
+
+.bgAmarelo {
+    background-color: #FF922E;
+}
+
+.bgVermelho {
+    background-color: #FF3030;
+}
