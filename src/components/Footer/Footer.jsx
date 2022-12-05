@@ -3,7 +3,7 @@ import {FooterStyles} from "./footerStyles.js"
 
 const Footer = ({count}) => {
     return (
-      <FooterStyles>
+      <FooterStyles  data-test="footer">
         <span>{count}/{cards.length} CONCLUÍDOS</span> 
       </FooterStyles>
     );

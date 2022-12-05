@@ -34,8 +34,8 @@ const QuestionClose = ({index, setQuestionOpenClass, backgroundColor, colorQuest
 
     return (
         <ClosedQuestion colorQuestionFinish={colorQuestionFinish} textDecoration={textDecoration}>
-            <p>Pergunta {index + 1}</p>
-            <img src={renderImg(backgroundColor)} alt="Seta virar card" onClick={() => handleQuestion(backgroundColor)} />
+            <p data-test="flashcard-text">Pergunta {index + 1}</p>
+            <img src={renderImg(backgroundColor)} data-test="play-btn" alt="Seta virar card" onClick={() => handleQuestion(backgroundColor)} />
         </ClosedQuestion>
     );
 }

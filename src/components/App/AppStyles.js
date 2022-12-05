@@ -1,6 +1,7 @@
 import styles from "styled-components";
 
 export const Screen = styles.div `
+
     background-color: #FB6B6B;
     min-height: 100vh;
     display: flex;
