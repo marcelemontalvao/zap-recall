@@ -1,7 +1,6 @@
 import styles from "styled-components";
 
 export const Screen = styles.div `
-
     background-color: #FB6B6B;
     min-height: 100vh;
     display: flex;
@@ -9,5 +8,5 @@ export const Screen = styles.div `
     align-items: center;
     margin: 0px;
     padding: 0px;
-    padding-bottom: 200px;
+    margin-bottom: 70px;
 `
