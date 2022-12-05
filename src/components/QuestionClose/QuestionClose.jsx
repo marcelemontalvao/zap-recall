@@ -2,31 +2,41 @@ import play from "../../assets/img/seta_play.png"
 import right from "../../assets/img/icone_certo.png"
 import error from "../../assets/img/icone_erro.png"
 import almost from "../../assets/img/icone_quase.png"
-import "./questionCloseStyles.css"
+import {ClosedQuestion} from "./questionCloseStyles.js"
 
-const QuestionClose = ({index, setQuestionOpenClass, backgroundColor, colorQuestionFinish, setColorQuestionFinish}) => {
+const QuestionClose = ({index, setQuestionOpenClass, backgroundColor, colorQuestionFinish, setColorQuestionFinish, textDecoration, setTextDecoration}) => {
 
     const renderImg = (backgroundColor) => {
         switch(backgroundColor) {
             case "bgVermelho":
-                setColorQuestionFinish("cRed")
+                setColorQuestionFinish("#FF3030")
+                setTextDecoration("line-through")
                 return error;
             case "bgAmarelo":
-                setColorQuestionFinish("cYellow")
+                setColorQuestionFinish("#FF922E")
+                setTextDecoration("line-through")
                 return almost;
             case "bgVerde" :
-                setColorQuestionFinish("cGreen")
+                setColorQuestionFinish("#2FBE34")
+                setTextDecoration("line-through")
                 return right;
             default: 
                 return play;
         }
     }
 
+
+    const handleQuestion = (backgroundColor) => {
+        if(backgroundColor === "") {
+            setQuestionOpenClass(true) 
+        }
+    }
+
     return (
-        <div className={colorQuestionFinish}>
+        <ClosedQuestion colorQuestionFinish={colorQuestionFinish} textDecoration={textDecoration}>
             <p>Pergunta {index + 1}</p>
-            <img src={renderImg(backgroundColor)} alt="Seta virar card" onClick={() => setQuestionOpenClass(true)} />
-        </div>
+            <img src={renderImg(backgroundColor)} alt="Seta virar card" onClick={() => handleQuestion(backgroundColor)} />
+        </ClosedQuestion>
     );
 }
 

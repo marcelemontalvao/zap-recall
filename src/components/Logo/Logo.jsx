@@ -1,12 +1,12 @@
 import logo from "../../assets/img/logo.png"
-import "./LogoStyles.css"
+import {LogoContainer} from "./LogoStyles.js"
 
 const Logo = () => {
     return (
-      <div className="logo-container">
+      <LogoContainer>
         <img src={logo} alt="" />
         <h1>ZapRecall</h1> 
-      </div>
+      </LogoContainer>
     );
 }
 

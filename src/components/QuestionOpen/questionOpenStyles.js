@@ -1,4 +1,6 @@
-.pergunta-aberta {
+import styles from "styled-components"
+
+export const OpenQuestion = styles.div `
     width: 300px;
     margin: 12px;
     padding: 15px;
@@ -17,27 +19,27 @@
     flex-direction: column;
     justify-content: space-between;
     gap: 10px;
-}
-  
-.pergunta-aberta > img{
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    cursor: pointer;
-}
 
-.btns {
+    img {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        cursor: pointer;
+    }
+`
+
+export const DivButtons = styles.div `
     display: flex;
     justify-content: space-around;
-}
 
-.btns button {
-    width: 85px;
-    height: 37px;
-    color: #FFFFFF;
-    font-size: 12px;
-    font-family: 'Recursive';
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
+    button {
+        width: 85px;
+        height: 37px;
+        color: #FFFFFF;
+        font-size: 12px;
+        font-family: 'Recursive';
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+`

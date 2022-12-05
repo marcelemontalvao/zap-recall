@@ -1,11 +1,11 @@
 import cards from "../../cards.js"
-import "./footerStyles.css"
+import {FooterStyles} from "./footerStyles.js"
 
-const Footer = ({count, setCount}) => {
+const Footer = ({count}) => {
     return (
-      <div className="footer-concluidos">
+      <FooterStyles>
         <span>{count}/{cards.length} CONCLUÍDOS</span> 
-      </div>
+      </FooterStyles>
     );
 }
 

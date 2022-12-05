@@ -1,15 +1,14 @@
-import "./buttonStyles.css"
+import {ButtonStyle} from "./buttonStyles.js"
 
-const Button = ({backgroundColor, setBackgroundColor, textButton, questionOpenClass, setQuestionOpenClass, count, setCount}) => {
-  console.log(questionOpenClass)  
+const Button = ({backgroundColor, setBackgroundColor, textButton, buttonBackgroundColor, setQuestionOpenClass, count, setCount}) => {
   return (
-      <button className={backgroundColor} onClick={()=> {
+      <ButtonStyle backgroundColor={backgroundColor} buttonBackgroundColor={buttonBackgroundColor} onClick={()=> {
         setQuestionOpenClass(false)
         setBackgroundColor(backgroundColor)
         setCount(count + 1)
       }}>
         <p>{textButton}</p>
-      </button>
+      </ButtonStyle>
     );
 }
 
