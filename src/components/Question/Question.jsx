@@ -11,14 +11,14 @@ const Question = ({index, question, answer, count, setCount}) => {
 
 
     return (
-        <>
+        <div data-test="flashcard">
             {questionOpenClass 
                 ? 
                     <QuestionOpen question={question} answer={answer} questionOpenClass={questionOpenClass} setQuestionOpenClass={setQuestionOpenClass} backgroundColor={backgroundColor} setBackgroundColor={setBackgroundColor} count={count} setCount={setCount} buttonBackgroundColor={buttonBackgroundColor} setButtonBackgroundColor={setButtonBackgroundColor} /> 
                 : 
                     <QuestionClose index={index} setQuestionOpenClass={setQuestionOpenClass} backgroundColor={backgroundColor} setBackgroundColor={setBackgroundColor} colorQuestionFinish={colorQuestionFinish} setColorQuestionFinish={setColorQuestionFinish} textDecoration={textDecoration} setTextDecoration={setTextDecoration} /> 
             }
-        </>
+        </div>
     );
 }
 
